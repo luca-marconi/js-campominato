@@ -90,8 +90,8 @@ console.log(posizioneMine);
 var boom = false;
     while ((bandierinePiazzate.length < bandierineMax) && (boom == false)) {
         var bandierinaDaPiazzare = parseInt(prompt('scrivi un numero da 1 a' + dimensioneCampo));
-        while (isNaN(bandierinaDaPiazzare)) {
-        var bandierinaDaPiazzare = parseInt(prompt('non hai inserito un numero, riprova con un numero!'));
+        while ((isNaN(bandierinaDaPiazzare)) || (bandierinaDaPiazzare > dimensioneCampo) || (bandierinaDaPiazzare < 1)) {
+        var bandierinaDaPiazzare = parseInt(prompt('hai inserito una parola o un numero non valido! riprova con un numero da 1 a: ' + dimensioneCampo));
         }
         if (!bandierinePiazzate.includes(bandierinaDaPiazzare)) {
             if (!posizioneMine.includes(bandierinaDaPiazzare)) {
